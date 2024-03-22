@@ -1,0 +1,25 @@
+ .B-ORGANIZACAO#yyy[data-ext-id="yyy"], .I-ORGANIZACAO#yyy[data-ext-id="yyy"] {
+    background-color: red !important; 
+}
+
+.B-PESSOA#yyy[data-ext-id="yyy"], .I-PESSOA#yyy[data-ext-id="yyy"] {
+    background-color: lightblue !important;
+}
+
+ .B-TEMPO#yyy[data-ext-id="yyy"], .I-TEMPO#yyy[data-ext-id="yyy"]{
+    background-color: green !important;
+}
+
+.B-LOCAL#yyy[data-ext-id="yyy"], .I-LOCAL#yyy[data-ext-id="yyy"] {
+    background-color: rgb(225, 225, 24) !important;
+}
+
+.B-LEGISLACAO#yyy[data-ext-id="yyy"], .I-LEGISLACAO#yyy[data-ext-id="yyy"] {
+    background-color: orange !important;
+}
+
+.B-JURISPRUDENCIA#yyy[data-ext-id="yyy"], .I-JURISPRUDENCIA#yyy[data-ext-id="yyy"] {
+    background-color: violet !important
+}
+
+
