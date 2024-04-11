@@ -102,7 +102,6 @@ if (b) {
         sender,
         sendResponse
       ){
-        console.log(request.type);
         if (request.type === "replaceBody") {
           
           const new_objects = request.content;
@@ -146,7 +145,6 @@ if (b) {
           b.appendChild(tempoTotalPredicao);
           b.appendChild(tempoTotalColeta)
 
-          console.log(size, request.content)
         }
       })
   });

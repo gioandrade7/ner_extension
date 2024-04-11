@@ -60,12 +60,10 @@ chrome.runtime.onMessage.addListener(async function (
   if (request.type === "startTimer") {
     // Registra o tempo inicial de execução
     tempoInicio = performance.now();
-    console.log(`tempoInicio: ${tempoInicio}`);
   }
 
   if (request.type === "predict") {
 
-    console.log(`TEMPO PREDIÇÃO TOTAL INICIAL: ${tempoTotalPredicao}`)
     // Caminho para o modelo BERT
     const caminhoModelo = "lener_bert";
 
@@ -87,10 +85,8 @@ chrome.runtime.onMessage.addListener(async function (
     for (let i = 1; i <= totalSentencas; i++) {
       // Registra o tempo inicial de predição
       tempoInicioPredicao = performance.now();
-      console.log(`tempoInicioPredicao: ${tempoInicioPredicao}`);
 
       let frase = request.message[i];
-      console.log(`FRASE: ${frase}`)
 
       // Tokeniza a frase
       const tokens = await tokenizer(frase);
@@ -99,7 +95,7 @@ chrome.runtime.onMessage.addListener(async function (
       if (tokens.input_ids.size > 512) {
         resultadoPredicao = [];
         const pedacos = await tokenizador(frase); // Utiliza a função separada de tokenização
-        console.log(pedacos);
+        
         for (const pedaço of pedacos) {
           resultadoPredicao = resultadoPredicao.concat(
             await pipe(pedaço, { ignore_labels: [] })
@@ -110,21 +106,18 @@ chrome.runtime.onMessage.addListener(async function (
         resultadoPredicao = await pipe(frase, { ignore_labels: [] });
       }
 
-      console.log(resultadoPredicao)
+      
 
       // Registra o tempo final de predição
       tempoFimPredicao = performance.now();
-      console.log(`tempoFimPredicao: ${tempoFimPredicao}`);
 
       // Acumula o tempo total de predição
       tempoTotalPredicao += tempoFimPredicao - tempoInicioPredicao;
-      console.log(`tempoTotalPredicao: ${tempoTotalPredicao}`);
 
       // Processa o resultado da predição e gera o texto com marcações de entidades
 
       // Registra o tempo inicial de marcação
       tempoInicioMarcacao = performance.now();
-      console.log(`tempoInicioMarcacao: ${tempoInicioMarcacao}`);
 
       let indice = 0;
       resultadoPredicao.forEach((elemento) => {
@@ -187,21 +180,18 @@ chrome.runtime.onMessage.addListener(async function (
         indice++;
       });
 
-      console.log(novoTexto);
       novoTexto = novoTexto.slice(1, novoTexto.length); // Remove space from the beginning.
       novosObjetos.push({ text: novoTexto, id: i });
       novoTexto = "";
 
       // Registra o tempo final de marcação
       tempoFimMarcacao = performance.now();
-      console.log(`tempoFimMarcacao: ${tempoFimMarcacao}`);
 
       // Acumula o tempo total de marcação
       tempoTotalMarcacao += tempoFimMarcacao - tempoInicioMarcacao;
-      console.log(`tempoTotalMarcacao: ${tempoTotalMarcacao}`);
     }
 
-    //console.log(novosObjetos);
+
     await chrome.tabs.sendMessage(tab.id, {
       type: "replaceBody",
       content: novosObjetos,
@@ -214,9 +204,9 @@ chrome.runtime.onMessage.addListener(async function (
       target: { tabId: tab.id },
     });
 
-    console.log(`timeStart 2: ${tempoInicio}`);
+
     tempoFim = performance.now() - tempoInicio;
-    console.log(`timeEnd: ${tempoFim}`);
+
 
     await chrome.tabs.sendMessage(tab.id, {
       type: "markTime",
@@ -225,9 +215,6 @@ chrome.runtime.onMessage.addListener(async function (
     });
     tempoTotalPredicao = 0;
     tempoTotalMarcacao = 0;
-    console.log(
-      `Execution time: total -> ${tempoFim} predição -> ${tempoTotalPredicao} marcacao -> ${tempoTotalMarcacao}ms`
-    );
   }
 });
 

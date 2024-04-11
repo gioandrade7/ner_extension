@@ -74,7 +74,6 @@ chrome.runtime.onMessage.addListener(async function (request, sender) {
     for (let i = 1; i <= totalSentencas; i++) {
 
       let frase = request.message[i];
-      console.log(`FRASE: ${frase}`);
 
       // Tokeniza a frase
       const tokens = await tokenizer(frase);
@@ -83,7 +82,6 @@ chrome.runtime.onMessage.addListener(async function (request, sender) {
       if (tokens.input_ids.size > 512) {
         resultadoPredicao = [];
         const pedacos = await tokenizador(frase); // Utiliza a função separada de tokenização
-        console.log(pedacos);
         for (const pedaço of pedacos) {
           resultadoPredicao = resultadoPredicao.concat(
             await pipe(pedaço, { ignore_labels: [] })
@@ -155,13 +153,10 @@ chrome.runtime.onMessage.addListener(async function (request, sender) {
         indice++;
       });
 
-      console.log(novoTexto);
       novoTexto = novoTexto.slice(1, novoTexto.length); // Remove space from the beginning.
       novosObjetos.push({ text: novoTexto, id: i });
       novoTexto = "";
     }
-
-    console.log(novosObjetos);
     await chrome.tabs.sendMessage(tab.id, {
       type: "replaceBody",
       content: novosObjetos,

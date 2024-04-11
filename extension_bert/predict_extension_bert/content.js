@@ -59,7 +59,6 @@ function getText(body) {
       extIdCount++;
     });
   }
-  console.log(textDict);
 }
 
 chrome.runtime.onMessage.addListener(async function (
