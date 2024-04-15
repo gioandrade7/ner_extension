@@ -1,7 +1,7 @@
 # Aplicação NER client-side 
 
 ## Descrição do Projeto
-Este projeto foi desenvolvido pelo Instituto de Computação (IComp) da Universidade Federal do Amazonas (UFAM), em colaboração com a empresa JusBrasil. É dedicado a verificar a viabilidade de uma aplicação com arquitetura client-side, que possa identificar e destacar entidades nomeadas em texto.
+Este projeto, resultado da colaboração entre o Instituto de Computação (IComp) da Universidade Federal do Amazonas (UFAM) e a empresa JusBrasil, visa explorar a viabilidade de uma aplicação com arquitetura *client-side* para identificar e destacar entidades nomeadas em texto. Para alcançar esse objetivo, desenvolvemos uma extensão para o navegador Google Chrome, que nada mais é do que um software adicionado ao navegador e executado exclusivamente no lado do cliente. Além disso, conduzimos testes e coletamos dados para poder entender melhor o funcionamento da extensão.
 
 <h4 align="center"> 
 	✅  Aplicação NER client-side 🧩 Concluído ✅
@@ -16,8 +16,6 @@ Este projeto foi desenvolvido pelo Instituto de Computação (IComp) da Universi
 <p align="center">
   <img src="./assets/Screenshot2.png" />
 </p>
-
-h4>
 
 ## Pré-requisitos e como rodar a aplicação
 
