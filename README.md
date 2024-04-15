@@ -32,3 +32,13 @@ $ https://github.com/gioandrade7/ner_extension.git
 4. Encontre e selecione a pasta *predict_extension_bert* do repositório clonado.
 5. Acesse uma página web que contenha texto.
 6. Clique na extensão para ativá-la.
+
+## 🛠 Tecnologias
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Tensorflow](https://www.tensorflow.org/)
+- [Tensorflow.js](https://www.tensorflow.org/js)
+- [Huggin Face](https://huggingface.co/)
+- [Transformer.js](https://huggingface.co/docs/transformers.js/en/index)
+- [Onnx Runtime](https://onnxruntime.ai/)
+- [Selenium](https://www.selenium.dev/)
