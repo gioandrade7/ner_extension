@@ -5,9 +5,11 @@ Este projeto, resultado da colaboração entre o Instituto de Computação (ICom
 
 Tabela de conteúdos
 =================
+<!--ts-->
    * [Capturas de tela](#capturas-de-tela)
    * [Como usar](#como-usar)
    * [Tecnologias](#tecnologias)
+<!--te-->
 
 ## 📸 Capturas de Tela
 
