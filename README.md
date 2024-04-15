@@ -12,3 +12,7 @@ Este projeto foi desenvolvido pelo Instituto de Computação (IComp) da Universi
 <p align="center">
   <img src="./assets/screenshot1.png" />
 </p>
+
+<p align="center">
+  <img src="./assets/Screenshot2" />
+</p>
