@@ -16,14 +16,18 @@ chromeOptions.headless = False
 chromeOptions.add_argument("load-extension=./predict_extension_bert_auto")
 chromeOptions.add_experimental_option("detach", True)
 
-files = ['correio.csv']
+files = ['correio.txt']
 
 urls = {}
 for i in files:
     file = open("urls/"+i, "r")
-    data = list(csv.reader(file, delimiter=","))
+    data=[]
+    for line in file:
+        line = line.split('\n')[0].replace(" ", "")
+        data.append(line)
     split = i.split('.')
     urls[split[0]] = data
+    print(urls)
     file.close()
 
 
@@ -74,8 +78,7 @@ def get_logs(url):
 
 
 for i in urls:
-    for url in urls[i]:
-        url = url[0]                                                                                     
+    for url in urls[i]:                                                                                    
 
         logs, entities = get_logs(url)
         print(logs)                 
