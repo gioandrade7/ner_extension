@@ -1,13 +1,15 @@
 # Aplicação NER client-side 
 
-## Descrição do Projeto
+## 💻💻Descrição do Projeto
 Este projeto, resultado da colaboração entre o Instituto de Computação (IComp) da Universidade Federal do Amazonas (UFAM) e a empresa JusBrasil, visa explorar a viabilidade de uma aplicação com arquitetura *client-side* para identificar e destacar entidades nomeadas em texto. Para alcançar esse objetivo, desenvolvemos uma extensão, que nada mais é do que um software adicionado ao navegador e executado exclusivamente no lado do cliente, para o navegador Google Chrome. Além disso, conduzimos testes e coletamos dados para poder entender melhor o funcionamento da extensão.
 
-<h4 align="center"> 
-	✅  Aplicação NER client-side 🧩 Concluído ✅
-</h4>
+Tabela de conteúdos
+=================
+   * [Capturas de tela](#capturas-de-tela)
+   * [Como usar](#como-usar)
+   * [Tecnologias](#tecnologias)
 
-## Capturas de Tela
+## 📸 Capturas de Tela
 
 <p align="center">
   <img src="./assets/screenshot1.png" />
@@ -17,7 +19,7 @@ Este projeto, resultado da colaboração entre o Instituto de Computação (ICom
   <img src="./assets/Screenshot2.png" />
 </p>
 
-## Pré-requisitos e como rodar a aplicação
+## 📖 Como usar
 
 Para poder utilizar a aplicação, você vai precisar ter instalado na sua máquina o navegador [Google Chrome](https://www.google.com/chrome/dr/download/?brand=JJTC&ds_kid=43700077663103092&gad_source=1&gclid=CjwKCAjwoPOwBhAeEiwAJuXRh6_4khON9QuxjT_aLSf2ldXvHtRgmmkHRSgigPImGnzoPdRMuQf2uRoCfFQQAvD_BwE&gclsrc=aw.ds).
 
