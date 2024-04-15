@@ -1,25 +1,25 @@
-.B-ORGANIZACAO, .I-ORGANIZACAO, .B-ORG, .I-ORG{
-    background-color: red;
+ .B-ORGANIZACAO#yyy[data-ext-id="yyy"], .I-ORGANIZACAO#yyy[data-ext-id="yyy"] {
+    background-color: red !important; 
 }
 
-.B-PESSOA, .I-PESSOA, .B-PER, .I-PER{
-    background-color: lightblue;
+.B-PESSOA#yyy[data-ext-id="yyy"], .I-PESSOA#yyy[data-ext-id="yyy"] {
+    background-color: lightblue !important;
 }
 
-.B-TEMPO, .I-TEMPO, .B-MISC, .I-MISC{
-    background-color: green;
+ .B-TEMPO#yyy[data-ext-id="yyy"], .I-TEMPO#yyy[data-ext-id="yyy"]{
+    background-color: green !important;
 }
 
-.B-LOCAL, .I-LOCAL, .B-LOC, .I-LOC{
-    background-color: rgb(225, 225, 24);
+.B-LOCAL#yyy[data-ext-id="yyy"], .I-LOCAL#yyy[data-ext-id="yyy"] {
+    background-color: rgb(225, 225, 24) !important;
 }
 
-.B-LEGISLACAO, .I-LEGISLACAO{
-    background-color: orange
+.B-LEGISLACAO#yyy[data-ext-id="yyy"], .I-LEGISLACAO#yyy[data-ext-id="yyy"] {
+    background-color: orange !important;
 }
 
-.B-JURISPRUDENCIA, .I-JURISPRUDENCIA{
-    background-color: violet
+.B-JURISPRUDENCIA#yyy[data-ext-id="yyy"], .I-JURISPRUDENCIA#yyy[data-ext-id="yyy"] {
+    background-color: violet !important
 }
 
 
