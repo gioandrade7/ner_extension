@@ -1,7 +1,12 @@
 # Aplicação NER client-side 
 
-## 💻Descrição do Projeto
-Este projeto, resultado da colaboração entre o Instituto de Computação (IComp) da Universidade Federal do Amazonas (UFAM) e a empresa JusBrasil, visa explorar a viabilidade de uma aplicação com arquitetura *client-side* para identificar e destacar entidades nomeadas em texto. Para alcançar esse objetivo, desenvolvemos uma extensão, que nada mais é do que um software adicionado ao navegador e executado exclusivamente no lado do cliente, para o navegador Google Chrome. Além disso, conduzimos testes e coletamos dados para poder entender melhor o funcionamento da extensão.
+## 💻 Descrição do Projeto
+Este projeto, resultado da colaboração entre o Instituto de Computação (IComp) da Universidade Federal do Amazonas (UFAM) e a empresa JusBrasil, visa explorar a viabilidade de uma aplicação com arquitetura *client-side* para identificar e destacar entidades nomeadas em texto em português do domínio jurídico. Para alcançar esse objetivo, desenvolvemos uma extensão, que nada mais é do que um software adicionado ao navegador e executado exclusivamente no lado do cliente, para o navegador Google Chrome. Além disso, conduzimos testes e coletamos dados para poder entender melhor o funcionamento da extensão.
+
+A identificação de entidades é realizada por meio do modelo de linguagem [BERTimbau](https://huggingface.co/neuralmind/bert-base-portuguese-cased), integrado à extensão. Este modelo foi submetido a ajustes finos com o conjunto de dados [LeNER-Br](https://huggingface.co/datasets/lener_br) para capacitar a identificação de entidades no contexto jurídico. O funcionamento da extensão ocorre, basicamente, em três etapas:
+  1. Extração do conteúdo textual da página;
+  2. Utilização desse texto como entrada para o modelo, permitindo a identificação e classificação das entidades;
+  3. Marcação das entidades nomeadas na página web, utilizando cores distintas.
 
 🏁 Tabela de conteúdos
 =================
