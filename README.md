@@ -14,5 +14,5 @@ Este projeto foi desenvolvido pelo Instituto de Computação (IComp) da Universi
 </p>
 
 <p align="center">
-  <img src="./assets/Screenshot2" />
+  <img src="./assets/Screenshot2.png" />
 </p>
