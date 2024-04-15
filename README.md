@@ -6,12 +6,12 @@ Este projeto, resultado da colaboração entre o Instituto de Computação (ICom
 Tabela de conteúdos
 =================
 <!--ts-->
-   * [Capturas de tela](#id)
+   * [Capturas de tela](#-capturas-de-tela)
    * [Como usar](#como-usar)
    * [Tecnologias](#tecnologias)
 <!--te-->
 
-## 📸 Capturas de Tela{#id}
+## 📸 Capturas de Tela
 
 <p align="center">
   <img src="./assets/screenshot1.png" />
