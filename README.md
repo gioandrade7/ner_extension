@@ -53,3 +53,52 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Transformer.js](https://huggingface.co/docs/transformers.js/en/index)
 - [Onnx Runtime](https://onnxruntime.ai/)
 - [Selenium](https://www.selenium.dev/)
+
+## 🔬 Experimentos e Resultados
+
+###Experimentos
+Na parte dos experimentos, foram coletados dados como: tempo de execução, quantidade de entidades por tipo extraídas e também o tamanho da página em palavras. Esses dados foram extraídos de 450 páginas dos seguintes portais de notícia: [Migalhas](https://www.migalhas.com.br/), [Congresso em Foco](https://congressoemfoco.uol.com.br/), [Correio Braziliense](https://www.correiobraziliense.com.br/), [Jota](https://www.jota.info/) e [G1](https://g1.globo.com/).
+
+Para automatizar este experimento, utilizamos a biblioteca [Selenium](https://www.selenium.dev/) e criamos um script Python que ativa automaticamente a extensão nas páginas para coleta de dados. No entanto, a biblioteca tem acesso apenas ao DOM da página, o que impossibilitava o clique na extensão.
+
+Para contornar essa limitação, desenvolvemos uma extensão adicional, localizada no diretório *predict_extension_auto*, criada especificamente para a execução dos experimentos. Esta extensão, assim como a original, marca as entidades, mas possui a vantagem de ser ativada por meio de um botão inserido na própria página web. Assim, o script consegue ativar a extensão através deste botão.
+
+<p align="center">
+  <img src="./assets/botao.png" />
+</p>
+
+### Resultados
+
+No que diz respeito ao desempenho do modelo, ele alcançou um **f1-score** de 84%. O gráfico abaixo ilustra o desempenho do modelo por tipo de entidade, exibindo tanto o **f1-score**, quanto a **precisão** e a **revocação**.
+
+<p align="center">
+  <img src="./assets/metrics_bert.png" />
+</p>
+
+A análise do gráfico revela que o modelo demonstrou um desempenho notavelmente superior na identificação de entidades categorizadas como **LOCAL** e **PESSOA**.
+
+Os gráficos seguintes estão intrinsecamente relacionados à extensão em questão.
+
+O próximo gráfico, ilustra um *boxplot* para cada portal de notícia do tempo de execução da extensão. Observa-se que o tempo médio de execução da extensão variou entre 10 e 20 segundos.
+
+<p align="center">
+  <img src="./assets/tempo_boxplot.png" />
+</p>
+
+O gráfico de barras subsequente exibe a quantidade de cada tipo de entidade extraída em cada portal de notícias. A partir desta visualização, torna-se evidente que as entidades pertencentes ao domínio jurídico foram as menos identificadas pelo modelo.
+
+<p align="center">
+  <img src="./assets/portal_entidade.png" />
+</p>
+
+Por fim, o gráfico de dispersão abaixo estabelece uma correlação entre o tamanho das páginas, medido em palavras, e o tempo de execução da extensão. É perceptível um padrão quase linear entre essas duas variáveis, indicando que o tempo de execução aumenta proporcionalmente com o número de palavras.
+
+<p align="center">
+  <img src="./assets/tempo_tam.png" />
+</p>
+
+
+
+
+
+
