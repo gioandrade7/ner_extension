@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Teste js",
+    "description": "Enable focus mode on Chrome's official Extensions and Chrome Web store documentation.",
+    "version": "1.0",
+    "icons":{
+        "16": "images/icon-16 (1).png",
+        "32": "images/icon-32 (1).png",
+        "48": "images/icon-48 (1).png",
+        "128": "images/icon-128 (1).png"
+    },
+    "content_scripts":[
+        {
+            "js": [ "content.js"],
+            "matches":[
+                "<all_urls>"
+            ]
+        }
+    ] ,
+   
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+      },
+   
+    "action": {
+        "default_icon": {
+            "16": "images/icon-16 (1).png",
+            "32": "images/icon-32 (1).png",
+            "48": "images/icon-48 (1).png",
+            "128": "images/icon-128 (1).png"
+        }
+    },
+
+    "permissions": ["activeTab", "scripting"]
+}

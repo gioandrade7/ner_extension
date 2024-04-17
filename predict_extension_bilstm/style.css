@@ -1,0 +1,16 @@
+.B-LOC, .I-LOC{
+    background-color: red;
+}
+
+.B-PER, .I-PER{
+    background-color: blue;
+}
+
+.B-ORG, .I-ORG{
+    background-color: green;
+}
+
+.B-MISC, .I-MISC{
+    background-color: rgb(225, 225, 24);
+}
+
