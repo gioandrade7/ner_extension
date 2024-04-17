@@ -16,6 +16,7 @@ O funcionamento da extensão ocorre, basicamente, em três etapas:
    * 🔘 [Capturas de tela](#-capturas-de-tela)
    * 🔘 [Como usar](#-como-usar)
    * 🔘 [Tecnologias](#-tecnologias)
+   * 🔘 [Experimentos e Resultados](#-experimentos-e-resultados)
 <!--te-->
 
 ## 📸 Capturas de Tela
