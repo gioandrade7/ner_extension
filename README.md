@@ -57,7 +57,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 🔬 Experimentos e Resultados
 
-###Experimentos
+### Experimentos
 Na parte dos experimentos, foram coletados dados como: tempo de execução, quantidade de entidades por tipo extraídas e também o tamanho da página em palavras. Esses dados foram extraídos de 450 páginas dos seguintes portais de notícia: [Migalhas](https://www.migalhas.com.br/), [Congresso em Foco](https://congressoemfoco.uol.com.br/), [Correio Braziliense](https://www.correiobraziliense.com.br/), [Jota](https://www.jota.info/) e [G1](https://g1.globo.com/).
 
 Para automatizar este experimento, utilizamos a biblioteca [Selenium](https://www.selenium.dev/) e criamos um script Python que ativa automaticamente a extensão nas páginas para coleta de dados. No entanto, a biblioteca tem acesso apenas ao DOM da página, o que impossibilitava o clique na extensão.
